@@ -5,6 +5,16 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   };
 } else if (process.env.NODE_ENV === "production") {
   module.exports = {
+    provider: 'aws-s3',
+    providerOptions: {
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_ACCESS_SECRET,
+      region: process.env.AWS_BUCKET_REGION,
+      params: {
+        Bucket: process.env.AWS_BUCKET_NAME,
+      },
+    },
+    
     provider: "cloudinary",
     providerOptions: {
       cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

@@ -4,16 +4,20 @@
   "keywords": ["strapi", "heroku", "starter", "blog"],
   "repository": "https://github.com/strapi/strapi-starter-blog",
   "env": {
-    "CLOUDINARY_CLOUD_NAME": {
-      "description": "The 'Cloud name' of your Cloudinary account",
+    "AWS_BUCKET_NAME": {
+      "description": "The name of your AWS bucket",
       "required": true
     },
-    "CLOUDINARY_API_KEY": {
-      "description": "The 'API Key' of your Cloudinary account",
+    "AWS_BUCKET_REGION": {
+      "description": "The AWS region your bucket is in",
       "required": true
     },
-    "CLOUDINARY_API_SECRET": {
-      "description": "The 'API Secret' of your Cloudinary account",
+    "AWS_ACCESS_KEY_ID": {
+      "description": "The 'API Key' of your AWS account",
+      "required": true
+    },
+    "AWS_ACCESS_SECRET": {
+      "description": "The 'API Secret' of your AWS account",
       "required": true
     }
   },
