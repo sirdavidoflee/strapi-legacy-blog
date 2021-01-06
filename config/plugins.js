@@ -8,6 +8,6 @@ module.exports = ({ env }) => ({
       params: {
         Bucket: 'cdn.probablybad.com' env('AWS_BUCKET_NAME'),
       },
-    },
+    }
   }
 });
